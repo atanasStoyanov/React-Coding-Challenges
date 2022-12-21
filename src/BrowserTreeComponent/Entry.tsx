@@ -23,8 +23,8 @@ export const Entry = ({ entry, depth }: { entry: TEntry; depth: number }) => {
       )}
       {isExpanded && (
         <div style={{ paddingLeft: `${depth * 10}px` }}>
-          {entry.children?.map((entry) => (
-            <Entry entry={entry} depth={depth + 1} />
+          {entry.children?.map((entry, index) => (
+            <Entry key={index} entry={entry} depth={depth + 1} />
           ))}
         </div>
       )}

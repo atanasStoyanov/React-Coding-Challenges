@@ -4,10 +4,3 @@
   align-items: center;
   height: 100vh;
 }
-
-.tree-button {
-  background-color: transparent;
-  border: none;
-  font: inherit;
-  padding: 0;
-}
