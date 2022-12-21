@@ -1,13 +1,15 @@
 import "./App.css";
 
-import { BrowserTreeComponent } from "./BrowserTreeComponent";
-import { CircleClick } from "./CircleClick";
+// import { BrowserTreeComponent } from "./BrowserTreeComponent";
+// import { CircleClick } from "./CircleClick";
+import { MemoryGame } from "./MemoryGame";
 
 function App() {
   return (
     <div className="App">
-      <BrowserTreeComponent />
+      {/* <BrowserTreeComponent /> */}
       {/* <CircleClick /> */}
+      <MemoryGame />
     </div>
   );
 }
