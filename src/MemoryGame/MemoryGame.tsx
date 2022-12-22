@@ -6,7 +6,7 @@ type TCardCoordinates = {
   column: number;
 };
 
-const initialGameState = [
+const getInitialGameState = () => [
   [
     { value: 0, isRevealed: false },
     { value: 3, isRevealed: false },
@@ -28,7 +28,7 @@ const initialGameState = [
 ];
 
 export const MemoryGame = () => {
-  const [grid, setGrid] = useState(initialGameState);
+  const [grid, setGrid] = useState(getInitialGameState());
   const [firstRevealedCard, setFirstRevealedCard] =
     useState<TCardCoordinates | null>(null);
   const [preventCardClicks, setPreventCardClicks] = useState(false);
@@ -68,13 +68,8 @@ export const MemoryGame = () => {
   };
 
   const handleReset = () => {
-    const resetGrid = grid.map((row) =>
-      row.map((card) => {
-        return { ...card, isRevealed: false };
-      })
-    );
     setGameOver(false)
-    setGrid(resetGrid);
+    setGrid(getInitialGameState());
   };
 
   return (
